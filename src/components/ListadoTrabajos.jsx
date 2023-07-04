@@ -11,7 +11,7 @@ export const ListadoTrabajos = ({ limite }) => {
           return (
             <article key={trabajo.key} className='work-item'>
               <div className='mask'>
-                <img src={`/img/${trabajo.id}.png`} alt={trabajo.id} />
+                <img src={`/img/${trabajo.id}.png`} alt={'imagenes con id'} />
               </div>
               <span>{trabajo.categoria}</span>
               <h2><Link to={`/proyecto/${trabajo.id}`}>{trabajo.nombre}</Link></h2>
