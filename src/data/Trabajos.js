@@ -3,7 +3,7 @@ export  const trabajos =[
         'id':'avengerProyect',
         'key':'0',
         'nombre':'Proyecto Marvel',
-        'url':'https://tiny-dusk-95b6ab.netlify.app/inicio',
+        'url':'https://teal-pasca-18f2f2.netlify.app/inicio',
         'tecnologia':'JavaScript, React, Bootstrap, api Rest',
         'categoria':'Desarrollo web',
         'descripcion':'Pagina hecha con react, hook, JavaScripty consumo del api de Marvel'
