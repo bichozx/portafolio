@@ -7,32 +7,62 @@ export const HeaderNav = () => {
             <header className='header'>
                 <div className='logo'>
                     <span>
-                        <img src='/img/logo.png'/>
+                        <img src='/img/logo.png' alt='Logo' />
                     </span>
-                    
                 </div>
                 <nav>
                     <ul>
                         <li>
-                            <NavLink to='/inicio' className={({ isActive }) => isActive ? 'active' : ''}>Inicio</NavLink>
+                            <NavLink
+                                to='/inicio'
+                                activeClassName='active' // Utiliza la clase de estilo para el enlace activo
+                                className='nav-link'>
+                                Inicio
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/portafolio' className={({ isActive }) => isActive ? 'active' : ''} >Portafolio</NavLink>
+                            <NavLink
+                                to='/portafolio'
+                                activeClassName='active'
+                                className='nav-link'
+                            >
+                                Portafolio
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/servicios' className={({ isActive }) => isActive ? 'active' : ''}>Servicios</NavLink>
+                            <NavLink
+                                to='/servicios'
+                                activeClassName='active'
+                                className='nav-link'
+                            >
+                                Servicios
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/curriculum' className={({ isActive }) => isActive ? 'active' : ''}>Curriculum</NavLink>
+                            <NavLink
+                                to='/curriculum'
+                                activeClassName='active'
+                                className='nav-link'
+                            >
+                                Curriculum
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/contacto' className={({ isActive }) => isActive ? 'active' : ''}>Contacto</NavLink>
+                            <NavLink
+                                to='/contacto'
+                                activeClassName='active'
+                                className='nav-link'
+                            >
+                                Contacto
+                            </NavLink>
                         </li>
-
                     </ul>
                 </nav>
             </header>
         </>
     )
 }
+
+
+
 

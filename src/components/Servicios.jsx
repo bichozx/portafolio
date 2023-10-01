@@ -3,27 +3,23 @@ import React from 'react'
 export const Servicios = () => {
   return (
     <>
-      <div className='page'>
-        <h1 className='heading'>Servicios</h1>
+     <div className='page'>
+      <h1 className='heading'>Servicios</h1>
 
-        <section className='service'>
-          <article >
-            <h2>
-            Desarrollo de aplicaciones web:
-            </h2>
-            <p>
-             Experiencia en el desarrollo de aplicaciones web utilizando tecnologías como <strong>JavaScript</strong>, <strong>React Hooks</strong> y <strong>HTML/CSS</strong>. Capacidad para crear interfaces de usuario interactivas y funcionales.
-            </p>
-          </article>
-          <article >
-            <h2>
-            Resolución de problemas técnicos:
-            </h2>
-            <p>
+      <section className='service'>
+        <article>
+          <h2>Desarrollo de aplicaciones web:</h2>
+          <p>
+            Experiencia en el desarrollo de aplicaciones web utilizando tecnologías como <strong>JavaScript</strong>, <strong>React Hooks</strong> y <strong>HTML/CSS</strong>. Capacidad para crear interfaces de usuario interactivas y funcionales.
+          </p>
+        </article>
+        <article>
+          <h2>Resolución de problemas técnicos:</h2>
+          <p>
             Habilidad para identificar y resolver problemas técnicos de manera eficiente. Experiencia en el seguimiento y corrección de errores en el código y en la implementación de soluciones efectivas.
-            </p>
-          </article>
-          <article >
+          </p>
+        </article>
+        <article >
             <h2>
             Gestión del estado con React Hooks:
             </h2>
@@ -55,9 +51,9 @@ export const Servicios = () => {
             Conocimientos en el uso de sistemas de control de versiones como Git y plataformas de colaboración como GitHub. Experiencia en la colaboración con otros desarrolladores a través de la creación de ramas, la realización de pull requests y la revisión de código.
             </p>
           </article>
-
-        </section>
-      </div>
+      </section>
+    </div>
+    
     </>
 
   )
