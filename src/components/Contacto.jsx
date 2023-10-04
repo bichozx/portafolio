@@ -6,6 +6,7 @@ export const Contacto = () => {
     apellido: '',
     email: '',
     motivo: '',
+    telefono: '',
   });
 
   const handleChange = (e) => {
@@ -16,16 +17,48 @@ export const Contacto = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes agregar lógica para enviar los datos del formulario a través de una solicitud HTTP o cualquier otro método de tu elección.
-    console.log('Datos del formulario:', formData);
+
+    // Ahora puedes acceder a formData dentro de handleSubmit
+    const data = {
+      nombre: formData.nombre,
+      apellido: formData.apellido,
+      email: formData.email,
+      motivo: formData.motivo,
+      telefono: formData.telefono,
+    };
+
+    // Enviar solicitud POST al servidor
+    try {
+      const response = await fetch('/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log('Correo electrónico enviado con éxito');
+        // Puedes redirigir al usuario o mostrar un mensaje de éxito aquí
+      } else {
+        console.error('Error al enviar el correo electrónico');
+        // Muestra un mensaje de error al usuario si la solicitud falla
+      }
+    } catch (error) {
+      console.error('Error en la solicitud HTTP:', error);
+    }
   };
+
 
   return (
     <div className="container">
-      <h1 className="header-title">Contacto</h1>
-      <form className="contact-form" onSubmit={handleSubmit}>
+    <div className=''>
+    <h1 className="header-title">Contacto</h1>
+       
+    </div>
+      <form className="contact-form" onSubmit={handleSubmit} data-netlify="true"  method="post">
         <div className="input-group">
           <input
             type="text"
@@ -57,6 +90,16 @@ export const Contacto = () => {
           />
         </div>
         <div className="input-group">
+          <input
+            type="tel"
+            name="telefono"
+            placeholder="Teléfono (WhatsApp)"
+            value={formData.telefono}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="input-group">
           <textarea
             name="motivo"
             placeholder="Motivo de contacto"
@@ -69,6 +112,7 @@ export const Contacto = () => {
           <button type="submit">Enviar</button>
         </div>
       </form>
+     
     </div>
   );
 };

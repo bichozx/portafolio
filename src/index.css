@@ -11,7 +11,9 @@
 /* Estilos generales */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -220,8 +222,7 @@ button:hover {
 .nav-list {
   list-style-type: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  margin: 0;
 }
 
 /* Estilos para los elementos de la lista del menú */
@@ -379,9 +380,45 @@ button:hover {
   color: var(--text-color);
 }
 
-/* Estilos adicionales si es necesario para hacerlo responsive */
+/* Estilos para el botón de menú en pantallas pequeñas */
+.menu-toggle {
+  display: none; /* Oculta el botón en pantallas grandes */
+}
+
+.menu-toggle .bar.active {
+  background-color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
-  .footer-text {
-    font-size: var(--font-size-small);
+  .menu-toggle {
+    display: none; /* Muestra el botón en pantallas pequeñas */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0px 5px 15px #ddd;
+  }
+
+  /* Estilos para mostrar el menú en pantallas pequeñas cuando el input está marcado */
+  .menu-toggle.active + .menu-dropdown {
+    display: block;
   }
 }
+
+
