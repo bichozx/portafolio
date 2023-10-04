@@ -4,7 +4,7 @@ import React from 'react'
 export const Principal = () => {
   
   const buildWhatsAppLink = () => {
-    return `https://api.whatsapp.com/send?phone=${3104436590}&text=Hola,%20estoy%20interesado%20en%20contactarte.`;
+    return `https://api.whatsapp.com/send?phone=${+573104436590}&text=Hola,%20estoy%20interesado%20en%20contactarte.`;
   };
 
   return (
