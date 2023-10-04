@@ -379,46 +379,54 @@ button:hover {
   font-size: var(--font-size-small);
   color: var(--text-color);
 }
-
-/* Estilos para el botón de menú en pantallas pequeñas */
-.menu-toggle {
-  display: none; /* Oculta el botón en pantallas grandes */
-}
-
-.menu-toggle .bar.active {
-  background-color: var(--primary-color);
-}
-
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: none; /* Muestra el botón en pantallas pequeñas */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    background-color: transparent;
-    border: none;
+  /* Estilos para el botón de menú en pantallas pequeñas */
+  .menu-button {
+    display: block; /* Mostrar el botón en pantallas pequeñas */
     cursor: pointer;
-    padding: 0;
-    margin: 0;
+    font-size: 24px; /* Tamaño de fuente ajustado */
   }
 
+  /* Estilos para el menú desplegable en pantallas pequeñas */
   .menu-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
+    display: none; /* Ocultar el menú desplegable en pantallas pequeñas */
     left: 0;
     background-color: white;
-    width: 100%;
+
     z-index: 1;
     border: 1px solid #ddd;
     box-shadow: 0px 5px 15px #ddd;
+    flex-direction: column; /* Cambiar la dirección de flexión a column */
+    align-items: flex-start; /* Alinear elementos en la parte superior */
+    justify-content: flex-start; /* Alinear elementos a la izquierda */
   }
 
   /* Estilos para mostrar el menú en pantallas pequeñas cuando el input está marcado */
-  .menu-toggle.active + .menu-dropdown {
+  .menu-toggle:checked + .menu-button + .menu-dropdown {
+    display: block; /* Mostrar el menú cuando está marcado en pantallas pequeñas */
+  }
+
+  /* Alineación vertical de elementos del menú */
+  .menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .menu-dropdown li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .menu-dropdown a {
     display: block;
+    padding: 10px 0;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .menu-dropdown a:hover {
+    color: var(--primary-color);
   }
 }
-
-

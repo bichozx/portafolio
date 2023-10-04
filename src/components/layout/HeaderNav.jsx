@@ -18,7 +18,6 @@ export const HeaderNav = () => {
           <img src="/img/logo.png" alt="Logo" />
         </span>
       </div>
-      {/* Agrega un input de tipo "checkbox" y una etiqueta para el botón de alternancia */}
       <input
         type="checkbox"
         id="menu-toggle"
@@ -26,10 +25,8 @@ export const HeaderNav = () => {
         checked={isMenuVisible}
         onChange={toggleMenu}
       />
-      <label htmlFor="menu-toggle" className="menu-toggle-label">
-        <div className={`bar ${isMenuVisible ? 'active' : ''}`}></div>
-        <div className={`bar ${isMenuVisible ? 'active' : ''}`}></div>
-        <div className={`bar ${isMenuVisible ? 'active' : ''}`}></div>
+      <label htmlFor="menu-toggle" className="menu-button">
+        ☰
       </label>
       <nav className={`menu-dropdown ${isMenuVisible ? 'open' : ''}`}>
         <ul>
