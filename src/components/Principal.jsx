@@ -10,7 +10,7 @@ export const Principal = () => {
   return (
     <div className='home'>
       <h1>
-        Soy <strong>Juan Camilo Giraldo</strong> desarrollador junior con 2 año de experiencia en el desarrollo de aplicaciones web utilizando <strong>JavaScript</strong> y <strong>React Hooks.</strong> Apasionado por crear soluciones eficientes y robustas, con sólidos conocimientos en el ciclo de vida de los componentes de React y la gestión del estado. Capacidad para trabajar en equipo y aprender rápidamente nuevas tecnologías. y en todo tipo de proyectos
+        Soy <strong>Juan Camilo Giraldo</strong>, full-stack developer con más de dos años de experiencia en el desarrollo de aplicaciones web  <strong>JavaScript</strong>, <strong>React Hooks.</strong> y <strong>Node.js</strong>; Apasionado por crear soluciones eficientes y robustas, con sólidos conocimientos en el ciclo de vida de los componentes de React y la gestión del estado. Capacidad para trabajar en equipo y aprender rápidamente nuevas tecnologías,  en todo tipo de proyectos 
       </h1>
       <h2 className='title'>
         Te ayudo a crear tu sitio o aplicación web y tener más visibilidad en Internet.

@@ -430,3 +430,54 @@ button:hover {
     color: var(--primary-color);
   }
 }
+
+
+/* Proyecto.css */
+
+.proyecto-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.proyecto-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.proyecto-image:hover {
+  transform: scale(1.1);
+}
+
+.proyecto-heading {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.proyecto-tecnologia {
+  color: gray;
+  margin: 10px 0;
+}
+
+/* Estilos para hacer el diseño responsive */
+@media (max-width: 768px) {
+  .proyecto-container {
+    padding: 10px;
+  }
+
+  .proyecto-heading {
+    font-size: 20px;
+  }
+
+  .proyecto-tecnologia {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .proyecto-heading {
+    font-size: 18px;
+  }
+}

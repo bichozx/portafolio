@@ -50,11 +50,11 @@ export const HeaderNav = () => {
               Curriculum
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/contacto" activeClassName="active" className="nav-link">
               Contacto
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
