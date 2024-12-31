@@ -10,9 +10,9 @@ export const HeaderNav = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white shadow-md">
+    <header className="w-full bg-gray-800 text-white shadow-md">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo estilizado */}
+        
         <div className="font-bold text-3xl tracking-tight text-white">
           Kmilo
         </div>
