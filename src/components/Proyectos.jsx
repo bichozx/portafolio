@@ -17,8 +17,8 @@ export const Proyecto = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen bg-gradient-to-b from-indigo-50 to-indigo-100 flex items-center justify-center p-6">
-      <div className="max-w-4xl w-full bg-white rounded-xl shadow-xl overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
+    <div className="bg-gray-100 min-h-screen  from-indigo-50 to-indigo-100 flex items-center justify-center p-6">
+      <div className=" max-w-4xl w-full bg-white rounded-xl shadow-xl overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
         
         <div className="relative group">
           <img

@@ -36,7 +36,7 @@ export  const trabajos =[
         'descripcion':'Mini carrito de compras, realizado con javaScript y boostrap, pero se debe actualizar el modal '
     }, 
     {
-        'id':'pruebastareas',
+        'id':'tareas-app',
         'key':'4',
         'nombre':'programador de tareas',
         'url':'https://tareasweb.netlify.app',
