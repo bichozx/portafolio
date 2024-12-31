@@ -3,7 +3,7 @@ import img from '../../src/img_Cv.png';
 
 export const Curriculum = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8 bg-gray-50 rounded-lg shadow-lg">
+    <div className="max-w-7xl mx-auto px-6 py-8 bg-gray-100 rounded-lg shadow-lg">
       <header className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-800">
           Juan Camilo Giraldo A
@@ -136,12 +136,12 @@ export const Curriculum = () => {
         <img
           src={img}
           alt="CV"
-          className="mx-auto mb-4 max-w-xs rounded-lg shadow-lg"
+          className="mx-auto mb-4 max-w-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-lg shadow-lg"
         />
         <a
           href="/downLoad/Cv-ats 2.2.pdf"
           download="Cv-ats 2.2.pdf"
-          className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-600"
+          className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-600 mt-4"
         >
           Descargar Curriculum
         </a>

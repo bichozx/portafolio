@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React,{useState} from 'react'
 
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 export const HeaderNav = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
@@ -12,28 +12,34 @@ export const HeaderNav = () => {
   return (
     <header className="bg-gray-800 text-white shadow-md">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo estilizado */}
         <div className="font-bold text-3xl tracking-tight text-white">
           Kmilo
         </div>
 
+        
         <button
           onClick={toggleMenu}
-          className="md:hidden text-3xl focus:outline-none"
+          className="md:hidden text-2xl focus:outline-none"
         >
           ☰
         </button>
 
+       
         <nav
           className={`${
-            isMenuVisible ? 'block' : 'hidden'
+            isMenuVisible ? "block" : "hidden"
           } md:block md:flex md:space-x-8 md:items-center`}
         >
           <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
             <li>
               <NavLink
                 to="/inicio"
-                activeClassName="text-yellow-300"
-                className="text-white hover:text-yellow-300 transition duration-300"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-yellow-300"
+                    : "text-white hover:text-yellow-300 transition duration-300"
+                }
                 onClick={() => setMenuVisible(false)}
               >
                 Inicio
@@ -42,8 +48,11 @@ export const HeaderNav = () => {
             <li>
               <NavLink
                 to="/portafolio"
-                activeClassName="text-yellow-300"
-                className="text-white hover:text-yellow-300 transition duration-300"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-yellow-300"
+                    : "text-white hover:text-yellow-300 transition duration-300"
+                }
                 onClick={() => setMenuVisible(false)}
               >
                 Portafolio
@@ -52,8 +61,11 @@ export const HeaderNav = () => {
             <li>
               <NavLink
                 to="/servicios"
-                activeClassName="text-yellow-300"
-                className="text-white hover:text-yellow-300 transition duration-300"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-yellow-300"
+                    : "text-white hover:text-yellow-300 transition duration-300"
+                }
                 onClick={() => setMenuVisible(false)}
               >
                 Servicios
@@ -62,8 +74,11 @@ export const HeaderNav = () => {
             <li>
               <NavLink
                 to="/curriculum"
-                activeClassName="text-yellow-300"
-                className="text-white hover:text-yellow-300 transition duration-300"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-yellow-300"
+                    : "text-white hover:text-yellow-300 transition duration-300"
+                }
                 onClick={() => setMenuVisible(false)}
               >
                 Curriculum
@@ -72,8 +87,11 @@ export const HeaderNav = () => {
             <li>
               <NavLink
                 to="/contacto"
-                activeClassName="text-yellow-300"
-                className="text-white hover:text-yellow-300 transition duration-300"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-yellow-300"
+                    : "text-white hover:text-yellow-300 transition duration-300"
+                }
                 onClick={() => setMenuVisible(false)}
               >
                 Contacto

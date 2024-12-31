@@ -5,7 +5,7 @@ import { trabajos } from '../data/Trabajos'
 export const ListadoTrabajos = ({ limite }) => {
   return (
     <>
-      <section className='works'>
+      <section className='bg-gray-100 flex flex-wrap justify-between gap-5'>
       {trabajos.slice(0, limite).map(trabajo => (
         <article key={trabajo.key} className='work-item'>
           <div className='mask'>

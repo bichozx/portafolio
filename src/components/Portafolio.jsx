@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Portafolio = () => {
   return (
-    <>
+    <div className='bg-gray-100'>
       <div className="page">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-5xl">
           Mi Portafolio
@@ -19,6 +19,6 @@ export const Portafolio = () => {
       <div className="w-full max-w-7xl px-4 sm:px-6 ">
         <ListadoTrabajos />
       </div>
-    </>
+    </div>
   );
 };
