@@ -16,7 +16,7 @@ export const Router = () => {
       <div className="min-h-screen flex flex-col">
         <HeaderNav />
 
-        <section className="flex-grow">
+        <section className="flex-grow bg-gray-100 ">
           <Routes>
             <Route path="/" element={<Navigate to="/inicio" />} />
             <Route path="/inicio" element={<Principal />} />

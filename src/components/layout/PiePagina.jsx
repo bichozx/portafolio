@@ -4,9 +4,9 @@ import React from 'react';
 
 export const PiePagina = () => {
   return (
-    <footer className="bg-gray-100 py-6 text-center border-t border-gray-300">
+    <footer className="bg-gray-100 py-6 text-center  border-gray-300">
       <p className="text-sm text-gray-600">
-        Portafolio Juan Camilo WEB &copy; Desarrollador Junior - 2023
+        Portafolio Juan Camilo WEB &copy; Desarrollador de Software 
       </p>
       <div className="mt-4 flex justify-center gap-4">
        

@@ -41,7 +41,7 @@ export const Proyecto = () => {
 
           
           <div className="mt-6 flex flex-wrap gap-6 justify-start">
-            {/* Botón para ir al enlace */}
+            
             {proyecto.enlace && (
               <a
                 href={proyecto.enlace}

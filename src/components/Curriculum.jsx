@@ -3,15 +3,15 @@ import img from '../../src/img_Cv.png';
 
 export const Curriculum = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8 bg-gray-100 rounded-lg shadow-lg">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">
-          Juan Camilo Giraldo A
+    <div className="bg-gray-100  max-w-7xl mx-auto px-6 py-8 rounded-lg shadow-lg">
+      <header className="text-center mb-5">
+        <h1 className="text-5xl font-bold text-gray-800">
+          Juan Camilo Giraldo 
         </h1>
         <p className="text-lg text-gray-600">Desarrollador de Software</p>
       </header>
 
-      <section className="mb-8">
+      <section className="mb-5">
         <h2 className="text-2xl font-semibold text-gray-700">Sobre mí</h2>
         <p className="text-gray-600 mt-2 leading-relaxed">
           Soy un desarrollador de software con 3 años de experiencia, enfocado
@@ -21,7 +21,7 @@ export const Curriculum = () => {
         </p>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-5">
         <h2 className="text-2xl font-semibold text-gray-700">
           Información Personal
         </h2>
@@ -38,7 +38,7 @@ export const Curriculum = () => {
         </ul>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-5">
         <h2 className="text-2xl font-semibold text-gray-700">Enlaces</h2>
         <ul className="mt-4 space-y-2">
           <li>
@@ -74,7 +74,7 @@ export const Curriculum = () => {
         </ul>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-5">
         <h2 className="text-2xl font-semibold text-gray-700">
           Experiencia Laboral
         </h2>
@@ -107,7 +107,7 @@ export const Curriculum = () => {
         </div>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-5">
         <h2 className="text-2xl font-semibold text-gray-700">Educación</h2>
         <p className="mt-4">
           <strong className="text-gray-800">
@@ -118,7 +118,7 @@ export const Curriculum = () => {
         </p>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-5">
         <h2 className="text-2xl font-semibold text-gray-700">
           Proyectos Personales
         </h2>
@@ -132,7 +132,7 @@ export const Curriculum = () => {
         </a>
       </section>
 
-      <section className="text-center">
+      <section className="text-center rounded">
         <img
           src={img}
           alt="CV"

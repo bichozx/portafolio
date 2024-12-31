@@ -48,9 +48,9 @@ export const Contacto = () => {
   };
 
   return (
-    <div className="bg-gray-100 max-w-7xl mx-auto px-6 py-8 bg-gray-50 rounded-lg shadow-lg">
+    <div className="bg-gray-100 max-w-7xl mx-auto px-6 py-8 rounded-lg shadow-lg">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">Contacto</h1>
+        <h1 className="text-5xl font-bold text-gray-800">Contacto</h1>
         <p className="text-lg text-gray-600">Ponte en contacto con nosotros</p>
       </div>
 
@@ -60,7 +60,7 @@ export const Contacto = () => {
         data-netlify="true"
         method="post"
       >
-        {/* Nombre */}
+        
         <div className="flex flex-col">
           <label
             htmlFor="nombre"
