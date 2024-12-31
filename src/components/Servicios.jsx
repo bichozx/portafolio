@@ -14,7 +14,7 @@ export const Servicios = () => {
         </p>
       </div>
 
-      <section className="space-y-8">
+      <section className="bg-gray-100 space-y-8">
         <article>
           <h2 className="text-2xl font-semibold text-blue-600 mb-2">
             Desarrollo de aplicaciones web
