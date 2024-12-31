@@ -9,54 +9,79 @@ export const HeaderNav = () => {
     setMenuVisible(!isMenuVisible);
   };
 
-  const headerClass = `header ${isMenuVisible ? 'open' : ''}`;
-
   return (
-    <header className={headerClass}>
-      <div className="logo">
-        <span>
-          <img src="/img/logo.png" alt="Logo" />
-        </span>
+    <header className="bg-gray-800 text-white shadow-md">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="font-bold text-3xl tracking-tight text-white">
+          Kmilo
+        </div>
+
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-3xl focus:outline-none"
+        >
+          ☰
+        </button>
+
+        <nav
+          className={`${
+            isMenuVisible ? 'block' : 'hidden'
+          } md:block md:flex md:space-x-8 md:items-center`}
+        >
+          <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+            <li>
+              <NavLink
+                to="/inicio"
+                activeClassName="text-yellow-300"
+                className="text-white hover:text-yellow-300 transition duration-300"
+                onClick={() => setMenuVisible(false)}
+              >
+                Inicio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/portafolio"
+                activeClassName="text-yellow-300"
+                className="text-white hover:text-yellow-300 transition duration-300"
+                onClick={() => setMenuVisible(false)}
+              >
+                Portafolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/servicios"
+                activeClassName="text-yellow-300"
+                className="text-white hover:text-yellow-300 transition duration-300"
+                onClick={() => setMenuVisible(false)}
+              >
+                Servicios
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/curriculum"
+                activeClassName="text-yellow-300"
+                className="text-white hover:text-yellow-300 transition duration-300"
+                onClick={() => setMenuVisible(false)}
+              >
+                Curriculum
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contacto"
+                activeClassName="text-yellow-300"
+                className="text-white hover:text-yellow-300 transition duration-300"
+                onClick={() => setMenuVisible(false)}
+              >
+                Contacto
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <input
-        type="checkbox"
-        id="menu-toggle"
-        className="menu-toggle"
-        checked={isMenuVisible}
-        onChange={toggleMenu}
-      />
-      <label htmlFor="menu-toggle" className="menu-button">
-        ☰
-      </label>
-      <nav className={`menu-dropdown ${isMenuVisible ? 'open' : ''}`}>
-        <ul>
-          <li>
-            <NavLink to="/inicio" activeClassName="active" className="nav-link">
-              Inicio
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/portafolio" activeClassName="active" className="nav-link">
-              Portafolio
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/servicios" activeClassName="active" className="nav-link">
-              Servicios
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/curriculum" activeClassName="active" className="nav-link">
-              Curriculum
-            </NavLink>
-          </li>
-          {/* <li>
-            <NavLink to="/contacto" activeClassName="active" className="nav-link">
-              Contacto
-            </NavLink>
-          </li> */}
-        </ul>
-      </nav>
     </header>
   );
 };

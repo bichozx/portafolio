@@ -11,8 +11,8 @@
 /* Estilos generales */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,7 +49,7 @@ body {
 .header .logo span {
   font-size: 2.5rem;
   font-weight: bolder;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin-right: 10px;
 }
 
@@ -105,7 +105,7 @@ body {
 
 /* Estilos para la página de inicio */
 .home h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 400;
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -119,7 +119,7 @@ strong {
 }
 
 .home .title a,
-input[type="submit"],
+input[type='submit'],
 button {
   padding: 0.1rem 0.1rem;
   border-radius: 5px;
@@ -130,7 +130,7 @@ button {
 }
 
 .home .title a:hover,
-input[type="submit"]:hover,
+input[type='submit']:hover,
 button:hover {
   background-color: var(--secondary-color);
 }
@@ -431,7 +431,6 @@ button:hover {
   }
 }
 
-
 /* Proyecto.css */
 
 .proyecto-container {
@@ -481,3 +480,7 @@ button:hover {
     font-size: 18px;
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

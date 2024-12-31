@@ -21,7 +21,7 @@ export const Router = () => {
                     <Route path='/portafolio' element={<Portafolio />} />
                     <Route path='/servicios' element={<Servicios />} />
                     <Route path='/curriculum' element={<Curriculum />} />
-                    {/* <Route path='/contacto' element={<Contacto />} /> */}
+                    <Route path='/contacto' element={<Contacto />} />
                     <Route path='/proyecto/:id' element={<Proyecto />} />
                     <Route path='/error' element={<div className='page'><h1 className='heading'>Error 404</h1></div>} />
                 </Routes>

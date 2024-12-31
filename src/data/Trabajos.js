@@ -35,14 +35,16 @@ export  const trabajos =[
         'categoria':'Desarrollo web',
         'descripcion':'Mini carrito de compras, realizado con javaScript y boostrap, pero se debe actualizar el modal '
     }, 
-    //{
-    //     'id':'camilogired_4',
-    //     'key':'4',
-    //     'nombre':'camilo face',
-    //     'url':'camilo.com',
-    //     'tecnologia':'HTML, CSS, JS, PHP, MySQL',
-    //     'categoria':'Desarrollo web'
-    // }, {
+    {
+        'id':'pruebastareas',
+        'key':'4',
+        'nombre':'programador de tareas',
+        'url':'https://tareasweb.netlify.app',
+        'tecnologia':'React, MoongoDb',
+        'Git':'https://github.com/bichozx/task-app.git',
+        'categoria':'Desarrollo web'
+    }, 
+    // {
     //     'id':'camilogired_5',
     //     'key':'5',
     //     'nombre':'camilo mtb',

@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Proyecto Personal - Kmilo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una página web personal creada como portafolio profesional. El objetivo de este proyecto es mostrar las habilidades, experiencia y proyectos de **Juan Camilo Giraldo** como desarrollador de software.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Página de inicio**: Una introducción personal con detalles sobre la carrera y habilidades de desarrollo.
+- **Portafolio**: Enlace a los proyectos realizados, destacando las tecnologías y herramientas utilizadas.
+- **Currículum**: Información profesional con detalles sobre experiencia laboral, formación académica y enlaces relevantes.
+- **Contacto**: Un formulario para que los usuarios puedan ponerse en contacto directamente.
+- **Navegación Responsiva**: Menú de navegación adaptativo con diseño móvil y de escritorio.
 
-### `npm start`
+## Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React.js**: Biblioteca de JavaScript para la construcción de la interfaz de usuario.
+- **Tailwind CSS**: Framework CSS para crear una interfaz de usuario moderna y completamente responsiva.
+- **React Router**: Librería para la navegación entre diferentes vistas de la aplicación.
+- **Fetch API**: Para el envío de datos de formulario y la integración con servicios de backend.
+- **Netlify Forms**: Usado para el envío de formularios de contacto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estructura del Proyecto
 
-### `npm test`
+El proyecto está organizado de la siguiente manera:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+/src /components HeaderNav.js # Componente de la barra de navegación superior. Curriculum.js # Componente que muestra el currículum de Juan Camilo Giraldo. Contacto.js # Componente con el formulario de contacto. /assets /img logo.png # Logo de la marca "Kmilo". App.js # Componente principal que contiene la estructura de la página. index.js # Punto de entrada de la aplicación.
 
-### `npm run build`
+## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clona este repositorio:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
 
-### `npm run eject`
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. cd nombre-del-repositorio
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Accede a la aplicación en tu navegador en http://localhost:3000.
 
-## Learn More
+Descripción de Componentes
+HeaderNav
+El componente HeaderNav contiene la barra de navegación principal del sitio, con los siguientes enlaces:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Inicio: Página de inicio.
+Portafolio: Enlace a los proyectos realizados.
+Servicios: Información sobre los servicios ofrecidos.
+Curriculum: Información sobre la experiencia y habilidades profesionales.
+Contacto: Formulario de contacto.
+El componente es totalmente responsivo, con un menú hamburguesa que aparece en dispositivos móviles.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Curriculum
+El componente Curriculum muestra el currículum de Juan Camilo Giraldo, con secciones que incluyen:
 
-### Code Splitting
+Sobre mí: Descripción personal y profesional.
+Información Personal: Dirección, teléfono y correo.
+Enlaces: Enlaces a redes sociales y portafolio.
+Experiencia Laboral: Detalles sobre la experiencia laboral.
+Educación: Formación académica.
+Proyectos Personales: Enlace a proyectos realizados.
+Contacto
+El componente Contacto incluye un formulario que permite a los usuarios enviar un mensaje. Los campos del formulario incluyen:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Nombre y Apellido.
+Email.
+Teléfono (WhatsApp).
+Motivo de contacto.
+Al enviar el formulario, se hace una solicitud HTTP para procesar los datos.

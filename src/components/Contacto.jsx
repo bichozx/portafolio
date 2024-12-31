@@ -20,7 +20,6 @@ export const Contacto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Ahora puedes acceder a formData dentro de handleSubmit
     const data = {
       nombre: formData.nombre,
       apellido: formData.apellido,
@@ -29,7 +28,6 @@ export const Contacto = () => {
       telefono: formData.telefono,
     };
 
-    // Enviar solicitud POST al servidor
     try {
       const response = await fetch('/send-email', {
         method: 'POST',
@@ -41,78 +39,131 @@ export const Contacto = () => {
 
       if (response.ok) {
         console.log('Correo electrónico enviado con éxito');
-        // Puedes redirigir al usuario o mostrar un mensaje de éxito aquí
       } else {
         console.error('Error al enviar el correo electrónico');
-        // Muestra un mensaje de error al usuario si la solicitud falla
       }
     } catch (error) {
       console.error('Error en la solicitud HTTP:', error);
     }
   };
 
-
   return (
-    <div className="container">
-    <div className=''>
-    <h1 className="header-title">Contacto</h1>
-       
-    </div>
-      <form className="contact-form" onSubmit={handleSubmit} data-netlify="true"  method="post">
-        <div className="input-group">
+    <div className="max-w-7xl mx-auto px-6 py-8 bg-gray-50 rounded-lg shadow-lg">
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-gray-800">Contacto</h1>
+        <p className="text-lg text-gray-600">Ponte en contacto con nosotros</p>
+      </div>
+
+      <form
+        className="space-y-6"
+        onSubmit={handleSubmit}
+        data-netlify="true"
+        method="post"
+      >
+        {/* Nombre */}
+        <div className="flex flex-col">
+          <label
+            htmlFor="nombre"
+            className="text-sm font-semibold text-gray-700"
+          >
+            Nombre
+          </label>
           <input
             type="text"
             name="nombre"
-            placeholder="Nombre"
+            id="nombre"
+            placeholder="Escribe tu nombre"
             value={formData.nombre}
             onChange={handleChange}
             required
+            className="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
           />
         </div>
-        <div className="input-group">
+
+        <div className="flex flex-col">
+          <label
+            htmlFor="apellido"
+            className="text-sm font-semibold text-gray-700"
+          >
+            Apellido
+          </label>
           <input
             type="text"
             name="apellido"
-            placeholder="Apellido"
+            id="apellido"
+            placeholder="Escribe tu apellido"
             value={formData.apellido}
             onChange={handleChange}
             required
+            className="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
           />
         </div>
-        <div className="input-group">
+
+        <div className="flex flex-col">
+          <label
+            htmlFor="email"
+            className="text-sm font-semibold text-gray-700"
+          >
+            Email
+          </label>
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            id="email"
+            placeholder="Escribe tu email"
             value={formData.email}
             onChange={handleChange}
             required
+            className="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
           />
         </div>
-        <div className="input-group">
+
+        <div className="flex flex-col">
+          <label
+            htmlFor="telefono"
+            className="text-sm font-semibold text-gray-700"
+          >
+            Teléfono (WhatsApp)
+          </label>
           <input
             type="tel"
             name="telefono"
-            placeholder="Teléfono (WhatsApp)"
+            id="telefono"
+            placeholder="Escribe tu número de teléfono"
             value={formData.telefono}
             onChange={handleChange}
             required
+            className="mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
           />
         </div>
-        <div className="input-group">
+
+        <div className="flex flex-col">
+          <label
+            htmlFor="motivo"
+            className="text-sm font-semibold text-gray-700"
+          >
+            Motivo de contacto
+          </label>
           <textarea
             name="motivo"
-            placeholder="Motivo de contacto"
+            id="motivo"
+            placeholder="Escribe el motivo de contacto"
             value={formData.motivo}
             onChange={handleChange}
             required
+            className="mt-2 px-4 py-2 h-32 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
           ></textarea>
         </div>
-        <div className="input-group">
-          <button type="submit">Enviar</button>
+
+        <div className="text-center">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-blue-600 transition duration-300"
+          >
+            Enviar
+          </button>
         </div>
       </form>
-     
     </div>
   );
 };
