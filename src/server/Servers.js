@@ -7,26 +7,26 @@ app.use(cors());
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configura el middleware para analizar el cuerpo de las solicitudes
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Configura el servidor de correo
+
 const transporter = nodemailer.createTransport({
-    service: 'Gmail', // Cambia a 'Outlook' si prefieres usar Outlook
+    service: 'Gmail', 
     auth: {
-        user: 'bichozx4587@gmail.com', // Tu dirección de correo electrónico
-        pass: 'Danger4587', // Tu contraseña de correo electrónico
+        user: '', 
+        pass: '', 
     },
 });
 
-// Ruta para enviar correos electrónicos
+
 app.post('/send-email', (req, res) => {
     const { nombre, apellido, email, motivo, telefono } = req.body;
 
     const mailOptions = {
-        from: 'bichozx4587@gmail.com', // Tu dirección de correo electrónico
-        to: 'bichozx4587@gmail.com', // La dirección de correo electrónico a la que quieres enviar el mensaje
+        from: 'bichozx4587@gmail.com', 
+        to: 'bichozx4587@gmail.com', 
         subject: 'Nuevo mensaje de contacto',
         html: `
       <p>Nombre: ${nombre} ${apellido}</p>
@@ -36,7 +36,7 @@ app.post('/send-email', (req, res) => {
     `,
     };
 
-    // Envía el correo electrónico
+    
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Error al enviar el correo electrónico:', error);
@@ -48,7 +48,7 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-// Puerto en el que se ejecutará el servidor
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
